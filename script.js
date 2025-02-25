@@ -65,13 +65,13 @@ function checkGuess(key) {//function for updating the buttons and verify the gue
 
             document.getElementById('word').innerHTML = wordguess;
             delete wordinfo[key];
-            buttons[buttonIndex].classList.remove("letter");
+            // buttons[buttonIndex].classList.remove("letter");
             buttons[buttonIndex].classList.add("lettercorrect");
             buttons[buttonIndex].setAttribute("disabled", true);
         }
         else if (buttonIndex !== -1) {
             chances--;
-            buttons[buttonIndex].classList.remove("letter");
+            // buttons[buttonIndex].classList.remove("letter");
             buttons[buttonIndex].classList.add("letterincorrect");
             buttons[buttonIndex].setAttribute("disabled", true);
             document.getElementById('chances').innerHTML = chances;

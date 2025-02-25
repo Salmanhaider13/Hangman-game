@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HANGMAN GAME</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HANGMAN GAME</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="used_image/unnamed.png" type="image/x-icon" />
 </head>
-
 <body onkeypress="checkGuess(event.key)">
-    <nav>
-        <img src="used_image/unnamed.png" alt="logo" style="float: left;">
-        <img src="used_image/hg-navbar-logo.png" alt="Hangman Logo">
-    </nav>
-    <hr>
-    <main>
-        <div class="parent">
-            <div class="child-left">
-                <img id="hangman-image" src="used_image/1.jpg" alt="Hangman Image">
-            </div>
-            <div class="child-right">
-                <div id="word-container">
-                    <hr>
-                    <p id="question-remaining">Words Remaining: <span id="words-remaining">10</span></p>
-                    <p id="chances-left">Chances Left: <span id="chances">5</span></p>
-                    <hr>
-                    <div id="word"></div>
-                    <hr>
-                    <button id="hint-button" class="otherButtons">HINT</button>
-                    <span id="hint-text"></span></p>
-                </div>
-                <hr>
-                <div id="letters"></div>
-                <hr>
-                <div id="result">
-                    <!-- <p class="result-info">Score: <span></span></p>
-                    <p class="result-info">Winning Percentage: <span></span></p>
-                    <button id="try-again-button">Try Again</button> -->
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src="word-list.js"></script>
-    <script src="script.js"></script>
-</body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="used_image/hg-navbar-logo.png" alt="Game Logo" />
+    </div>
+  </nav>
 
+  <main>
+    <section class="parent">
+      <div class="child-left">
+        <img id="hangman-image" src="used_image/1.jpg" alt="Hangman Stage" />
+      </div>
+      <div class="child-right">
+        <div id="word-container">
+          <div class="status">
+            <p id="question-remaining">Words Remaining: <span id="words-remaining">10</span></p>
+            <p id="chances-left">Chances Left: <span id="chances">5</span></p>
+          </div>
+          <div id="word"></div>
+          <button id="hint-button" class="otherButtons">HINT</button>
+          <span id="hint-text"></span>
+        </div>
+        <div id="letters"></div>
+        <div id="result"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="word-list.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
